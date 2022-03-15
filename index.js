@@ -50,7 +50,6 @@ app.put("/api/films/:filmID", (req, res) => {
       console.dir(dbResp)
      
       if (dbResp.modifiedCount == 1) {
-       // var objectId = editFilm._id;
         res.json({"updated":1});
       } else {
         res.json({"updated":0});
@@ -68,7 +67,6 @@ app.delete("/api/films/:filmID", async (req, res) => {
       console.dir(dbResp)
      
       if (dbResp.deletedCount == 1) {
-       // var objectId = editFilm._id;
         res.json({"deleted":1});
       } else {
         res.json({"deleted":0});
@@ -76,9 +74,9 @@ app.delete("/api/films/:filmID", async (req, res) => {
   })
 })
 
-
-const mongo_username = "mjcAtlas01"
-const mongo_password = "Uy78Hq234$g"
+// DB config - Setup with MongoDb Atlas
+const mongo_username = "xxxx"
+const mongo_password = "yyyy"
 const url = `mongodb+srv://${mongo_username}:${mongo_password}@mycluster01.ica5f.azure.mongodb.net/myMoviesDb?retryWrites=true&w=majority`;
 
 let db, filmsCollection
