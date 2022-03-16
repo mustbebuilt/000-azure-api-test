@@ -6,11 +6,13 @@ const port = process.env.PORT || 3000
 const app = express()
 
 app.use(express.json())
+
+// CORS for Cross Domain Access
 // Add whitelisted site
 // () for all
-
 let corsOptions = {
-  methods: "GET,POST,PUT,DELETE,OPTIONS"
+  methods: "GET,POST,PUT,DELETE",
+  origin: "https://mustbebuilt.github.io"
 }
 
 app.use(cors(corsOptions));

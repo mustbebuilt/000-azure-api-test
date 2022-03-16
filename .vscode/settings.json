@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/2a734a03-ee4b-4f1b-bf51-eab1a122ce7c/resourceGroups/groupTwoSHU/providers/Microsoft.Web/sites/nodeshufilms",
+    "appService.deploySubpath": "."
+}
