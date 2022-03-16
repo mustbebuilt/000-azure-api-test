@@ -1,7 +1,19 @@
 const express = require("express")
 const mongo = require("mongodb").MongoClient
+const cors = require('cors')
+const port = process.env.PORT || 3000
+
 const app = express()
+
 app.use(express.json())
+// Add whitelisted site
+// () for all
+
+let corsOptions = {
+  methods: "GET,POST,PUT,DELETE,OPTIONS"
+}
+
+app.use(cors(corsOptions));
 
 var ObjectId = require("mongodb").ObjectId; 
 
@@ -75,8 +87,8 @@ app.delete("/api/films/:filmID", async (req, res) => {
 })
 
 // DB config - Setup with MongoDb Atlas
-const mongo_username = "xxxx"
-const mongo_password = "yyyy"
+const mongo_username = "mjcAtlas01"
+const mongo_password = "Uy78Hq234$g"
 const url = `mongodb+srv://${mongo_username}:${mongo_password}@mycluster01.ica5f.azure.mongodb.net/myMoviesDb?retryWrites=true&w=majority`;
 
 let db, filmsCollection
@@ -97,4 +109,4 @@ mongo.connect(
   })
 
 
-  app.listen(8080, () => console.log("Server ready"))
+  app.listen(port, () => console.log("Server ready"))
