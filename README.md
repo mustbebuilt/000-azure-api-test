@@ -1,4 +1,4 @@
-# Node Express Mongodb Mininal RESTful Api
+# Node Express Mongodb Minimal RESTful Api
 
 Works with the Fetch API frontend https://github.com/mustbebuilt/fetch-minimal-api-demo
 
