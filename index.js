@@ -8,7 +8,7 @@ const app = express()
 app.use(express.json())
 
 // CORS for Cross Domain Access
-// Add whitelisted site
+// Add whitelisted sites
 // () for all
 let corsOptions = {
   methods: "GET,POST,PUT,DELETE",
@@ -89,8 +89,8 @@ app.delete("/api/films/:filmID", async (req, res) => {
 })
 
 // DB config - Setup with MongoDb Atlas
-const mongo_username = "mjcAtlas01"
-const mongo_password = "Uy78Hq234$g"
+const mongo_username = "xxxxx"
+const mongo_password = "yyyyy"
 const url = `mongodb+srv://${mongo_username}:${mongo_password}@mycluster01.ica5f.azure.mongodb.net/myMoviesDb?retryWrites=true&w=majority`;
 
 let db, filmsCollection
